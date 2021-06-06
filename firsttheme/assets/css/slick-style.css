@@ -1,0 +1,361 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat;
+}
+:root {
+  --brandContent: "NIKE";
+}
+/* Icons */
+@font-face {
+  font-family: "slick";
+  font-weight: normal;
+  font-style: normal;
+
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/slick.woff") format("woff"),
+    url("./fonts/slick.ttf") format("truetype"),
+    url("./fonts/slick.svg#slick") format("svg");
+}
+/* Arrows */
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+
+  position: absolute;
+  top: 50%;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+
+  cursor: pointer;
+
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  color: transparent;
+  outline: none;
+  background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+
+  opacity: 0.75;
+  color: white;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: -25px;
+}
+[dir="rtl"] .slick-prev {
+  right: -25px;
+  left: auto;
+}
+.slick-prev:before {
+  content: "←";
+}
+[dir="rtl"] .slick-prev:before {
+  content: "→";
+}
+
+.slick-next {
+  right: -25px;
+}
+[dir="rtl"] .slick-next {
+  right: auto;
+  left: -25px;
+}
+.slick-next:before {
+  content: "→";
+}
+[dir="rtl"] .slick-next:before {
+  content: "←";
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+
+  display: block;
+
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  text-align: center;
+}
+.slick-dots li {
+  position: relative;
+
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+
+  cursor: pointer;
+}
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+
+  display: block;
+
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+
+  cursor: pointer;
+
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+.slick-dots li button:before {
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 20px;
+
+  content: "•";
+  text-align: center;
+
+  opacity: 0.25;
+  color: black;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: black;
+}
+
+/* slick theme end here */
+/* reset default CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+html,
+html {
+  overflow-x: hidden;
+}
+body {
+}
+.container {
+  max-width: 1170px;
+  width: calc(100% - 120px);
+  padding: 15px;
+  margin: 20px auto;
+  -webkit-box-reflect: below -100px -webkit-linear-gradient(
+      bottom,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 40%,
+      transparent 100%
+    );
+}
+.slideBx {
+  padding: 0 15px;
+}
+.box {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  background: linear-gradient(to right, black, #1e272e);
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 300px;
+  height: 300px;
+  background: #ace735;
+  border-radius: 50%;
+  transition: 0.5s;
+  z-index: 0;
+}
+.box:hover::before {
+  transform: scale(5);
+}
+.box .brandName {
+  content: var(--brandContent);
+  color: #fff;
+  font: 700 italic 75px / 1 "Montserrat", sans-serif;
+  opacity: 0.1;
+  margin-top: 250px;
+  transition: 0.5s;
+}
+.box:hover .brandName {
+  margin-top: 200px;
+  color: #111;
+  opacity: 0.5;
+}
+.box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+}
+.box .imgBx img {
+  width: 250px;
+  height: auto;
+  margin: 40px auto 0;
+  transform: rotate(25deg);
+  transition: 0.5s;
+  display: block;
+}
+.box:hover .imgBx img {
+  transform: rotate(0deg);
+  filter: drop-shadow(0 0 3px rgba(000, 000, 000, 0.3));
+  -webkit-filter: drop-shadow(0 0 3px rgba(000, 000, 000, 0.3));
+}
+.title {
+  position: relative;
+  font-size: 24px;
+  color: #fff;
+  margin-top: 30px;
+  transition: 0.5s;
+}
+.box:hover .title {
+  color: #111;
+}
+/* custom style for slick  */
+.nikeSlick.slick-slider {
+  margin-bottom: 70px;
+}
+.slick-dots {
+  bottom: -45px;
+}
+.slick-dots li button:before {
+  font-size: 16px;
+  opacity: 0.75;
+  color: #ace735;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #ace735;
+  border: 1px solid #ace735;
+  line-height: 1.38;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #abff01);
+}
+.slick-prev {
+  left: -55px;
+}
+.slick-next {
+  right: -55px;
+}
+.slick-prev,
+.slick-next {
+  transform: translate(-50%, -50%);
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: "";
+  font-size: 24px;
+  opacity: 1;
+  color: #000;
+  background: #ace735;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-shadow: 0 0 black;
+}
+/* make it responsive */
+@media (min-width: 1024px) {
+  /* body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+}
+@media (max-width: 600px) {
+  .container {
+    width: calc(100% - 0px);
+  }
+}
+@media (max-width: 480px) {
+  .box {
+    height: 450px;
+  }
+  .box::after {
+    margin-top: 220px;
+  }
+  .box .imgBx img {
+    width: 200px;
+    height: auto;
+    margin: 60px auto 0;
+  }
+}

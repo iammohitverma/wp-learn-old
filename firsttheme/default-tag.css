@@ -1,0 +1,114 @@
+.gc-single-post .post-cntnt h1,
+.gc-single-post .post-cntnt h2,
+.gc-single-post .post-cntnt h3,
+.gc-single-post .post-cntnt h4,
+.gc-single-post .post-cntnt h5,
+.gc-single-post .post-cntnt h6 {
+  margin: 15px 0px;
+  color: #06175c;
+}
+
+.gc-single-post .post-cntnt h1 {
+  font-size: 36px;
+}
+
+.gc-single-post .post-cntnt h2 {
+  font-size: 32px;
+}
+
+.gc-single-post .post-cntnt h3 {
+  font-size: 30px;
+}
+
+.gc-single-post .post-cntnt h4 {
+  font-size: 28px;
+}
+
+.gc-single-post .post-cntnt h5 {
+  font-size: 24px;
+}
+
+.gc-single-post .post-cntnt h6 {
+  font-size: 20px;
+}
+
+.gc-single-post .post-cntnt a,
+.gc-single-post .post-cntnt a:hover,
+.gc-single-post .post-cntnt a:focus {
+  color: #00c3ed;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.gc-single-post .post-cntnt a:hover {
+  text-decoration: none;
+}
+
+.gc-single-post .post-cntnt p,
+.gc-single-post .post-cntnt {
+  color: #06175c91;
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.gc-single-post .post-cntnt img {
+  max-width: 100% !important;
+  height: auto !important;
+  -webkit-box-shadow: 0px 30px 15px -20px rgb(0 0 0 / 50%);
+  box-shadow: 0px 30px 15px -20px rgb(0 0 0 / 50%);
+  margin: 15px 0px;
+}
+
+.gc-single-post .post-cntnt ul,
+.gc-single-post .post-cntnt ol {
+  margin: 15px 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.gc-single-post .post-cntnt ul li::before {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  width: 15px;
+  height: 15px;
+  background: #00c3ed;
+  content: "";
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.gc-single-post .post-cntnt ol li::before {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #00c3ed;
+  content: "";
+}
+
+.gc-single-post .post-cntnt ul li,
+.gc-single-post .post-cntnt ol li {
+  padding-left: 35px;
+  color: #06175c91;
+  font-size: 14px;
+  padding-left: 35px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.gc-single-post .post-cntnt blockquote {
+  background: #ced7ff;
+  color: #06175c;
+  font-size: 13px;
+  padding: 15px 25px 15px 45px;
+  margin: 25px 35px;
+  border-left: 8px solid #06175c;
+}
